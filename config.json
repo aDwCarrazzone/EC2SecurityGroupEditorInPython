@@ -1,0 +1,29 @@
+{
+    "Groups": {
+        "ServiceName1": [
+            "ServiceName1",
+            "sg-0512a04914d7939e4"
+        ],
+        "ServiceName2": [
+            "ServiceName2",
+            "sg-0482e1307f2dcb16f"
+        ],
+        "ServiceName3": [
+            "ServiceName3",
+            "sg-0512a04914d7939e4"
+        ],
+        "ServiceName4": [
+            "ServiceName4",
+            "sg-0512a04914d7939e4"
+        ],
+        "ServiceName5": [
+            "ServiceName5",
+            "sg-0512a04914d7939e4"
+        ]
+    },
+    "AWS": {
+        "access_key": "access_key",
+        "secret_key": "secret_key",
+        "region": "region"
+    }
+}
