@@ -1,0 +1,4 @@
+json
+argparse
+boto3
+requests
