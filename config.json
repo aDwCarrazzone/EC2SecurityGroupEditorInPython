@@ -2,23 +2,23 @@
     "Groups": {
         "ServiceName1": [
             "ServiceName1",
-            "sg-0512a04914d7939e4"
+            "sg-SecurityGroupID"
         ],
         "ServiceName2": [
             "ServiceName2",
-            "sg-0482e1307f2dcb16f"
+            "sg-SecurityGroupID"
         ],
         "ServiceName3": [
             "ServiceName3",
-            "sg-0512a04914d7939e4"
+            "sg-SecurityGroupID"
         ],
         "ServiceName4": [
             "ServiceName4",
-            "sg-0512a04914d7939e4"
+            "sg-SecurityGroupID"
         ],
         "ServiceName5": [
             "ServiceName5",
-            "sg-0512a04914d7939e4"
+            "sg-SecurityGroupID"
         ]
     },
     "AWS": {

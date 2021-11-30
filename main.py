@@ -1,12 +1,12 @@
 # Script para parsear argumentos da linha de comando e dependendo do argumento trazer informações de regras existentes, adicionar regras ou remover regras em um grupo de segurança de um EC2 (AWS).
 # Autor: Andrew Vianna Carrazzone
 # Data: 27/11/2021
-# Versão: 1.0
 VERSION = "1.0"
+
 
 # Importação de bibliotecas
 import argparse
-from os import system
+
 
 # Importação de classes
 from aws import AmazomWebServices as AWS
@@ -14,16 +14,16 @@ from config import Config
 from requests import get
 import re as regex
 
-# Função de parseamento de argumentos
-# -add:     Adiciona uma regra a um grupo de segurança passando a descrição como valor do argumento. Esse argumento só pode ser usado se os argumentos -group e -type forem passados.
-# -remove:  Remove uma regra de um grupo de segurança passando a descrição como valor do argumento. Esse argumento só deve ser utilizado ao remover uma regra de um grupo de segurança. E não precisa de outros argumentos.
-# -list: Lista as regras existentes em um grupo de segurança passando o nome do grupo como valor do argumento.
-# -ip:      Não é obrigatório passar o valor do argumento, caso não seja passado, o valor padrão é o IP da máquina. Esse argumento é responsavel por identificar o IP da máquina.
-# -group:   É obrigatorio passar o valor do argumento, caso não seja passado, a mensagem de erro será mostrada. Esse argumento é responsável por identificar o grupo de segurança.
-# -type:    É obrigatorio passar o valor do argumento, caso não seja passado, a mensagem de erro será mostrada. Esse argumento é responsável por definir o tipo de regra que será adicionada.
-# -version: Exibe a versão do script.
-# -help: Exibe a ajuda do script.
 
+# Função de parseamento de argumentos
+# -add:         Adiciona uma regra a um grupo de segurança passando a descrição como valor do argumento. Esse argumento só pode ser usado se os argumentos -group e -type forem passados.
+# -remove:      Remove uma regra de um grupo de segurança passando a descrição como valor do argumento. Esse argumento só deve ser utilizado ao remover uma regra de um grupo de segurança. E não precisa de outros argumentos.
+# -list:        Lista as regras existentes em um grupo de segurança passando o nome do grupo como valor do argumento.
+# -ip:          Não é obrigatório passar o valor do argumento, caso não seja passado, o valor padrão é o IP da máquina. Esse argumento é responsavel por identificar o IP da máquina.
+# -g, --group:  É obrigatorio passar o valor do argumento, caso não seja passado, a mensagem de erro será mostrada. Esse argumento é responsável por identificar o grupo de segurança.
+# -t --type:    É obrigatorio passar o valor do argumento, caso não seja passado, a mensagem de erro será mostrada. Esse argumento é responsável por definir o tipo de regra que será adicionada.
+# -version:     Exibe a versão do script.
+# -help:        Exibe a ajuda do script.
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -70,7 +70,6 @@ def define_port(type):
         print("Erro: O tipo de regra deve ser RDP ou SSH.")
         exit()
     return port
-
 
 # Define o protocolo da regra de acordo com o tipo escolhio. SSH ou RDP.
 def define_protocol(type):
@@ -183,51 +182,5 @@ HELP = """
     -ip: O ip da regra.
 """
 
-
-# # Função principal do script.
-#     # Version não precisa de argumentos.
-#     if args.version:
-#         print("Versão: " + VERSION)
-#     # Help não precisa de argumentos.
-#     elif args.help:
-#         print("Uso: " + USAGE)
-#     # Adicionar regra. Precisa de argumentos. Se -add for passado, os argumentos -group -type são obrigatórios.
-
-#     elif args.remove:
-#         args = check_remove(args, config)
-#         aws.remove_rule(args.group, args.ip, args.port, args.protocol)
-#     elif args.list:
-#         args = check_list(args, config)
-#         aws.list_rules(args.group)
-#     else:
-#         print("Erro: Nenhum argumento foi passado.")
-#         exit()
-
-
-
-USAGE = """
-    Uso: main.py [OPÇÕES]
-    Opções:
-        -add, --add
-            Adiciona uma regra de segurança.
-        -remove, --remove
-            Remove uma regra de segurança.
-        -list, --list
-            Lista as regras de segurança.
-        -group, --group <nome do grupo>
-            Nome do grupo de segurança.
-        -type, --type <tipo de regra>
-            Tipo de regra.
-        -ip, --ip <ip>
-            IP da regra.
-        -port, --port <porta>
-            Porta da regra.
-        -protocol, --protocol <protocolo>
-            Protocolo da regra.
-        -version, --version
-            Mostra a versão do script.
-        -help, --help
-            Mostra a ajuda do script.
-"""
 if __name__ == "__main__":
     main()
