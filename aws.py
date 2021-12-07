@@ -10,7 +10,6 @@ class AmazomWebServices:
         self.secret_key = secret_key
         self.region     = region
         self.client     = boto3.client('ec2', aws_access_key_id=self.access_key, aws_secret_access_key=self.secret_key, region_name=self.region)
-        self.ec2        = boto3.client('ec2', aws_access_key_id=self.access_key, aws_secret_access_key=self.secret_key, region_name=self.region)
     
     # Função para listar os grupos de segurança
     def list_security_groups(self):

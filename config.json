@@ -1,8 +1,8 @@
 {
     "Groups": {
-        "ServiceName1": [
-            "ServiceName1",
-            "sg-SecurityGroupID"
+        "GrupoTemp": [
+            "GrupoTemp",
+            "sg-0f3fc7e5db540702d"
         ],
         "ServiceName2": [
             "ServiceName2",

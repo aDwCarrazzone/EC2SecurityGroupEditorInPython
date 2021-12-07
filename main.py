@@ -50,7 +50,8 @@ def parse_args():
                         "--type",
                         help="É obrigatorio passar o valor do argumento, caso não seja passado, a mensagem de erro será mostrada. Esse argumento é responsável por definir o tipo de regra que será adicionada.",
                         default="")
-    parser.add_argument("-version",
+    parser.add_argument("-v",
+                        "--version",
                         help="Exibe a versão do script.",
                         action="store_true")
     parser.add_argument("-help",
