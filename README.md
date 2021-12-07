@@ -39,7 +39,8 @@
 > <br>
 >   - AWS:<br>
 >     Os dados necessários para que seja feito a conexão através da AWS. <br>
->     Caso seja implementado a esteira é necessario
+> 
+>     Caso seja implementado a esteira é necessario alterar a linha 158 do código [main.py](main.py) com as credenciais correspondentes.<br>
 > <br>
 > - E então utilizando o "argparse" para inferencia
 >```
