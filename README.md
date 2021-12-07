@@ -12,8 +12,18 @@
  - [Licença](#licença)
 
 # Introdução
-> Script que parsea instruções, sejam elas para adicionar, remover ou lista as regras de um grupo de segurança da AWS.<br>
-> Todo o código leva como principio que cada classe deve ter um único propósito, a config obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos.<br>
+
+## Introdução aos termos
+> Durante toda a leitura você será apresentado á alguns termos que possivelmente não conhecerá, darei uma breve explicação sobre esses termos e sempre que eu citar os mesmos você poderá seguir os hiperlinks apresentados para ler mais sobre eles.
+> * AWS: Amazon Web Services é uma subsidiária da Amazon que fornece através de seu conjunto de serviços, plataformas de computação em nuvem.<br>
+> * EC2: Amazon Elastic Compute Cloud faz parte da plataforma de computação em nuvem da AWS, essa parte em especifica é a que permite alugar computadores virtuais.
+> * Grupo de segurança: O grupo de segurança atua como o firewall virtual para as máquinas EC2, controlando as regras de entrada e saída de tráfego para a mesma.
+> * Parcear: Parcear é um termo informal vindo de Parsing em inglês, que nesse contexto significa obter comandos e opções recebidas a partir do usuário.
+> * Esteira: O conceito de esteira seria referente a uma esteira de entrega 
+
+## Introdução a script
+> Script que parcea instruções, sejam elas para adicionar, remover ou lista as regras de um grupo de segurança da AWS.<br>
+> Todo o código leva como principio que cada classe deve ter um único propósito, a config obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos e opções.<br>
 > Esse projeto tem como objetivo ser implementado juntamente de uma esteira para que seja possível gerar uma auditoria das regras que são criadas.<br>
 
 # Visão Geral
@@ -109,5 +119,10 @@
 [Classification and Gradient-based Localization of Chest Radiographs](https://github.com/priyavrat-misra/xrays-and-gradcam#readme)<br>
 [Amazing GitHub Template](https://github.com/dec0dOS/amazing-github-template#readme)<br>
 ```Que ajudaram muito a escrever esse leia-me de uma forma mais agradável e legível.```
+
+# Metodologia
+> A criação desse script partiu da necessidade de uma maior segurança ao ambiente da AWS e de maior velocidade para adicionar as regras aos grupos de segurança.<br>
+> Durante todo o processo foi prestado muita atenção para que ficasse de facil entendimento o processa da script, tentando ser o mais simples sempre que possível e sempre criando comentários no código.
+> Como fonte inicial para que fosse possível o desenvolvimento da mesma foi utilizado a documentação do Boto3, todo o processo utiliza seus metodos apresentados na documentação. Toda a base do desenvolvimento foi utilizando essa documentação.
 
 # Licença
