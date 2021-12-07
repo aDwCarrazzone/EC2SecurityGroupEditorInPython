@@ -2,24 +2,25 @@
 
 ## Conteúdo
  ![cover](.assets/cover.png)
- - [Introdução](#introdução)
- - [Visão Geral](#visaogeral)
+ - [Introdução](#Introdução)
+ - [Visão Geral](#Visão-geral)
  - [Iniciando](#iniciando)
- - [Modo de uso](#uso)
- - [Exemplos de uso](#exemplodeuso)
- - [Conclusão](#conclusões)
- - [Referências](#referências)
+ - [Modo de uso](#modo-de-uso)
+ - [Exemplos de uso](#exemplos-de-uso)
+ - [Conclusão](#Conclusão)
+ - [Referências](#Referências)
+ - [Agradecimentos](#agradecimentos)
  - [Licença](#licença)
 
 # Introdução
 > Script que parsea instruções, sejam elas para adicionar, remover ou lista as regras de um grupo de segurança da AWS.<br>
-> Todo o código leva como príncipio que cada classe deve ter um único propósito, a config obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos.<br>
+> Todo o código leva como principio que cada classe deve ter um único propósito, a config obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos.<br>
 > Esse projeto tem como objetivo ser implementado juntamente de uma esteira para que seja possível gerar uma auditoria das regras que são criadas.<br>
 
 # Visão Geral
 > O projeto usa dados recebidos do usuário para listar, adicionar ou remover regras de um grupo de segurança de um Amazon EC2<br>
 > <br>
-> De acordo com a instrução parseado ele:<br>
+> De acordo com a instrução parceado ele:<br>
 
 # Iniciando
 > - Clone o repositorio:
@@ -39,6 +40,7 @@
 > <br>
 >   - AWS:<br>
 >     Os dados necessários para que seja feito a conexão através da AWS. <br>
+>     Caso seja implementado a esteira é necessario
 > <br>
 > - E então utilizando o "argparse" para inferencia
 >```
@@ -59,14 +61,14 @@
 >```
 > - Comandos:
 > ```
->   -add: Adiciona uma regra a um grupo de segurança passando a descrição como argumento. Essa instrução só é parseada se as instruções -g (--group) e -t (--type) forem passadas juntamente;
->   -rem: Remove uma regra de um grupo de segurança passando a descrição como valor do argumento. Essa instrução só é parseada se a instrução -g (--group) for passada juntamente;
->   -list: Lista as regras existentes em um grupo de segurança, essa instrução só é parseada se a instrução -g (--group) for passada juntamente;
+>   -add: Adiciona uma regra a um grupo de segurança passando a descrição como argumento. Essa instrução só é parceada se as instruções -g (--group) e -t (--type) forem passadas juntamente;
+>   -rem: Remove uma regra de um grupo de segurança passando a descrição como valor do argumento. Essa instrução só é parceada se a instrução -g (--group) for passada juntamente;
+>   -list: Lista as regras existentes em um grupo de segurança, essa instrução só é parceada se a instrução -g (--group) for passada juntamente;
 >   -v: Essa instrução é utilizada para trazer a versão da script.
 >   -help: Essa instrução é utilizada para exibir a ajuda do script.
 > ```
 
-# Exemplos de uso:
+# Exemplos de uso
 > - Adicionar uma regra RDP com a descrição AcessoRDP ao grupo GrupoDeExemplo
 > ```
 > python main.py -add AcessoRDP -g GrupoDeExemplo -t RDP
@@ -87,9 +89,26 @@
 >   Assim listando as regras existentes em GrupoDeExemplo.
 
 # Conclusão
+> Ao fazer o uso da script e da esteira de forma apropriada pode-se obter um ambiente de trabalho mais seguro e rápido para entregar resultados. Denota-se que a script não precisa de forma obrigatória da esteira para seu funcionamento, porém, a intenção da script é que ela seja utilizada juntamente com a esteira para que seja possível obter-se uma auditoria desse processo, de quem adicionou ou removeu uma regra, quando foi feito e quantas vezes.
+> 
+# Referências
+> - [Boto3 Docs 1.20.21 - Working with security groups](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-example-security-group.html)
+> - [Classification and Gradient-based Localization of Chest Radiographs](https://github.com/priyavrat-misra/xrays-and-gradcam#readme)
+> - [Amazing GitHub Template](https://github.com/dec0dOS/amazing-github-template#readme)
 
-# Referencias
-> - [1]
+# Agradecimentos
+ - Primeiramente a Deus, meus familiares, minha namorada e sua família:<br>
+    ```Que tiveram que me tolerar e aguentar durante esse tempo isolado escrevendo isso.```
+
+ - Aos Professores da faculdade [UNICEP](https://unicep.edu.br/rioclaro) e todo suporte dado:<br>
+  ```mesmo que eu tenha demorado muito para escolher um tema para apresentar```
+
+- Apesar de não encontrar exatamente o que eu queria, a documentação:<br>
+  [Boto3 Docs 1.20.21 - Working with security groups](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-example-security-group.html)
+
+- Aos projetos:<br>
+[Classification and Gradient-based Localization of Chest Radiographs](https://github.com/priyavrat-misra/xrays-and-gradcam#readme)<br>
+[Amazing GitHub Template](https://github.com/dec0dOS/amazing-github-template#readme)<br>
+```Que ajudaram muito a escrever esse leia-me de uma forma mais agradável e legível.```
 
 # Licença
-> temp
