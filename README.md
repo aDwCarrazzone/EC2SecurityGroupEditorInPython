@@ -19,7 +19,6 @@
 # Visão Geral
 > O projeto usa dados recebidos do usuário para listar, adicionar ou remover regras de um grupo de segurança de um Amazon EC2<br>
 > <br>
-> De acordo com a instrução parceado ele:<br>
 
 # Iniciando
 > - Clone o repositorio:
