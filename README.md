@@ -1,7 +1,6 @@
 # EC2 Security Group Editor In Python
-
+ ![cover](assets/unicep-cover.png)
 ## Conteúdo
- ![cover](.assets/cover.png)
  - [Introdução](#Introdução)
  - [Visão Geral](#Visão-geral)
  - [Iniciando](#iniciando)
