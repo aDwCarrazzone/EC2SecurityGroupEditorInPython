@@ -14,16 +14,16 @@
 # Introdução
 
 ## Introdução aos termos
-> Durante toda a leitura você será apresentado á alguns termos que possivelmente não conhecerá, darei uma breve explicação sobre esses termos e sempre que eu citar os mesmos você poderá seguir os hiperlinks apresentados para ler mais sobre eles.
-> * AWS: Amazon Web Services é uma subsidiária da Amazon que fornece através de seu conjunto de serviços, plataformas de computação em nuvem.<br>
-> * EC2: Amazon Elastic Compute Cloud faz parte da plataforma de computação em nuvem da AWS, essa parte em especifica é a que permite alugar computadores virtuais.
-> * Grupo de segurança: O grupo de segurança atua como o firewall virtual para as máquinas EC2, controlando as regras de entrada e saída de tráfego para a mesma.
-> * Parcear: Parcear é um termo informal vindo de Parsing em inglês, que nesse contexto significa obter comandos e opções recebidas a partir do usuário.
-> * Esteira: O conceito de esteira seria referente a uma esteira de entrega 
+> Durante toda a leitura você será apresentado a alguns termos que possivelmente não conhecerá. Darei uma breve explicação sobre esses termos e sempre que eu citar os mesmos você poderá seguir os hiperlinks apresentados para ler mais sobre eles.<br>
+> * AWS: Amazon Web Services é uma subsidiária da Amazon que fornece através de seu conjunto de serviços plataformas de computação em nuvem.<br>
+> * EC2: Amazon Elastic Compute Cloud faz parte da plataforma de computação em nuvem da AWS. Essa parte em especifica é a que permite alugar computadores virtuais.<br>
+> * Grupo de segurança: O grupo de segurança atua como o firewall virtual para as máquinas EC2, controlando as regras de entrada e saída de tráfego para a mesma.<br>
+> * Parcear: Parcear é um termo informal derivado de Parsing em inglês, que nesse contexto significa obter comandos e opções recebidas a partir do usuário.<br>
+> * Esteira: O conceito de esteira seria referente a uma esteira de entrega contínua, onde a script pode ser implementada para a criação e remoção de regras com histórico.<br>
 
 ## Introdução a script
 > Script que parcea instruções, sejam elas para adicionar, remover ou lista as regras de um grupo de segurança da AWS.<br>
-> Todo o código leva como principio que cada classe deve ter um único propósito, a config obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos e opções.<br>
+> Todo o código leva como principio que cada classe deve ter um único propósito. A [config]() obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos e opções.<br>
 > Esse projeto tem como objetivo ser implementado juntamente de uma esteira para que seja possível gerar uma auditoria das regras que são criadas.<br>
 
 # Visão Geral
@@ -98,7 +98,7 @@
 >   Assim listando as regras existentes em GrupoDeExemplo.
 
 # Conclusão
-> Ao fazer o uso da script e da esteira de forma apropriada pode-se obter um ambiente de trabalho mais seguro e rápido para entregar resultados. Denota-se que a script não precisa de forma obrigatória da esteira para seu funcionamento, porém, a intenção da script é que ela seja utilizada juntamente com a esteira para que seja possível obter-se uma auditoria desse processo, de quem adicionou ou removeu uma regra, quando foi feito e quantas vezes.
+> Ao fazer o uso da script e da esteira de forma apropriada pode-se obter um ambiente de trabalho mais seguro e rápido para entregar resultados. Denota-se que a script não precisa de forma obrigatória da esteira para seu funcionamento. Porém, a intenção da script é que a mesma seja utilizada juntamente com a esteira para que seja possível obter-se uma auditoria desse processo, de quem adicionou ou removeu uma regra, quando foi feito e quantas vezes.<br>
 > 
 # Referências
 > - [Boto3 Docs 1.20.21 - Working with security groups](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/ec2-example-security-group.html)
@@ -122,7 +122,7 @@
 
 # Metodologia
 > A criação desse script partiu da necessidade de uma maior segurança ao ambiente da AWS e de maior velocidade para adicionar as regras aos grupos de segurança.<br>
-> Durante todo o processo foi prestado muita atenção para que ficasse de facil entendimento o processa da script, tentando ser o mais simples sempre que possível e sempre criando comentários no código.
-> Como fonte inicial para que fosse possível o desenvolvimento da mesma foi utilizado a documentação do Boto3, todo o processo utiliza seus metodos apresentados na documentação. Toda a base do desenvolvimento foi utilizando essa documentação.
+> Durante todo o atentei principalmente para o facil entendimento do processo da script, tentando ser o mais simples possível e criando comentários no código.<br>
+> Como fonte inicial para que fosse possível o desenvolvimento da mesma foi utilizada a documentação do Boto3. Todo o processo utiliza os metodos inicialmente apresentados nessa documentação.<br>
 
 # Licença
