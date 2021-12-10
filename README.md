@@ -1,15 +1,15 @@
 # EC2 Security Group Editor In Python
  ![cover](assets/unicep-cover.png)
 ## Conteúdo
- - [Introdução](#Introdução)
- - [Visão Geral](#Visão-geral)
- - [Iniciando](#iniciando)
- - [Modo de uso](#modo-de-uso)
- - [Exemplos de uso](#exemplos-de-uso)
- - [Conclusão](#Conclusão)
- - [Referências](#Referências)
- - [Agradecimentos](#agradecimentos)
- - [Licença](#licença)
+> - [Introdução](#Introdução)
+> - [Visão Geral](#Visão-geral)
+> - [Iniciando](#iniciando)
+> - [Modo de uso](#modo-de-uso)
+> - [Exemplos de uso](#exemplos-de-uso)
+> - [Conclusão](#Conclusão)
+> - [Referências](#Referências)
+> - [Agradecimentos](#agradecimentos)
+> - [Licença](#licença)
 
 # Introdução
 
@@ -23,8 +23,9 @@
 
 ## Introdução a script
 > Script que parcea instruções, sejam elas para adicionar, remover ou lista as regras de um grupo de segurança da AWS.<br>
-> Todo o código leva como principio que cada classe deve ter um único propósito. A [config]() obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos e opções.<br>
+> Todo o código leva como principio que cada classe deve ter um único propósito. A config obtem os dados de configuração, a AWS envia e retorna dados da AWS e a main parsea os comandos e opções.<br>
 > Esse projeto tem como objetivo ser implementado juntamente de uma esteira para que seja possível gerar uma auditoria das regras que são criadas.<br>
+
 
 # Visão Geral
 > O projeto usa dados recebidos do usuário para listar, adicionar ou remover regras de um grupo de segurança de um Amazon EC2<br>
